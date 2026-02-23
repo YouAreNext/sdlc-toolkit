@@ -1,0 +1,13 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [{
+          "type": "command",
+          "command": "branch=$(cd $CLAUDE_PROJECT_DIR && git branch --show-current 2>/dev/null); if [ \"$branch\" = \"main\" ] || [ \"$branch\" = \"production\" ]; then echo '{\"decision\":\"block\",\"reason\":\"Cannot edit on protected branch. Create a feature branch first.\"}'; fi"
+        }]
+      }
+    ]
+  }
+}
