@@ -1,7 +1,7 @@
-Структурируй идею в Idea Brief.
+Structure the idea into an Idea Brief.
 
-Используй навык ideation. Входные данные: $ARGUMENTS
+Use the ideation skill. Input data: $ARGUMENTS
 
-Если $ARGUMENTS пустые — спроси пользователя описать идею.
-Если есть @docs/system-context.md — учти текущее состояние системы.
-Если есть @docs/discovery/INDEX.md — определи следующий номер итерации.
+If $ARGUMENTS is empty — ask the user to describe the idea.
+If @docs/system-context.md exists — consider the current system state.
+If @docs/discovery/INDEX.md exists — determine the next iteration number.

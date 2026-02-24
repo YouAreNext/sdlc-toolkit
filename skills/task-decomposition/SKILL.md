@@ -3,44 +3,44 @@ name: task-decomposition
 description: >
   Break down a PRD into developer tasks with dependencies, acceptance criteria,
   and role assignments. Generates ordered task list ready for sprint planning.
-  Triggers: "decompose", "нарезать задачи", "task breakdown", "разбить на задачи"
+  Triggers: "decompose", "break down tasks", "task breakdown", "split into tasks"
 allowed-tools: Read, Grep, Glob, Write
 ---
 
 # Task Decomposition Skill
 
-Нарежь PRD на конкретные задачи для разработчиков.
-Каждая задача — атомарная, с acceptance criteria, зависимостями и оценкой сложности.
+Break down the PRD into concrete tasks for developers.
+Each task is atomic, with acceptance criteria, dependencies, and complexity estimate.
 
-## Инструкции
+## Instructions
 
-1. Прочитай PRD из `docs/discovery/NN-<slug>/prd.md` (передаётся как аргумент или выбирается из последних в `docs/discovery/`)
-2. Прочитай `@docs/system-context.md` для понимания существующего кода
-3. Разбей на задачи, группируя по ролям:
+1. Read PRD from `docs/discovery/NN-<slug>/prd.md` (passed as argument or selected from recent in `docs/discovery/`)
+2. Read `@docs/system-context.md` to understand existing code
+3. Break down into tasks, grouping by roles:
    - **Infrastructure** — IaC, CI/CD, environments, IAM
-   - **Backend** — API, бизнес-логика, интеграции
-   - **Data** — модели, миграции, индексы, seed data
-   - **Frontend** — UI компоненты, страницы, формы (если применимо)
-4. Для каждой задачи заполни [шаблон задачи](templates/task.md)
-5. Определи зависимости между задачами (какая задача блокирует какую)
-6. Выстрой последовательность выполнения по волнам (waves):
-   - Wave 1: задачи без зависимостей (можно параллельно)
-   - Wave 2: зависят от Wave 1
-   - Wave 3+: и так далее
-7. Сохрани в `docs/discovery/NN-<slug>/tasks/`:
-   - `INDEX.md` — сводный файл с execution order
-   - `TASK-NNN.md` — отдельный файл для каждой задачи
-8. Обнови статус в `docs/discovery/INDEX.md` на `Approved`
+   - **Backend** — API, business logic, integrations
+   - **Data** — models, migrations, indexes, seed data
+   - **Frontend** — UI components, pages, forms (if applicable)
+4. For each task, fill in the [task template](templates/task.md)
+5. Determine dependencies between tasks (which task blocks which)
+6. Arrange execution sequence by waves:
+   - Wave 1: tasks with no dependencies (can run in parallel)
+   - Wave 2: depend on Wave 1
+   - Wave 3+: and so on
+7. Save to `docs/discovery/NN-<slug>/tasks/`:
+   - `INDEX.md` — summary file with execution order
+   - `TASK-NNN.md` — separate file for each task
+8. Update status in `docs/discovery/INDEX.md` to `Approved`
 
-## Важно
+## Important
 
-- Задача **атомарная** — один разработчик берёт и делает, не задавая вопросов «а что имеется в виду?»
-- У каждой задачи **конкретные acceptance criteria** — можно проверить done/not done
-- У каждой задачи указаны **файлы для создания/изменения**
-- Зависимости между задачами **явные** — "depends on TASK-XXX"
-- Complexity оценивается как S/M/L/XL (Small = часы, Medium = день, Large = 2-3 дня, XL = неделя)
-- Каждая задача ссылается на конкретное функциональное требование из PRD (FR-N)
+- Task is **atomic** — one developer picks it up and does it without asking "what does this mean?"
+- Each task has **concrete acceptance criteria** — can verify done/not done
+- Each task lists **files to create/modify**
+- Dependencies between tasks are **explicit** — "depends on TASK-XXX"
+- Complexity is estimated as S/M/L/XL (Small = hours, Medium = day, Large = 2-3 days, XL = week)
+- Each task references a specific functional requirement from PRD (FR-N)
 
 ## Supporting files
 
-- [templates/task.md](templates/task.md) — шаблон задачи
+- [templates/task.md](templates/task.md) — task template

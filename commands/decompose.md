@@ -1,9 +1,9 @@
-Разбей PRD на атомарные задачи для разработчиков.
+Break down the PRD into atomic tasks for developers.
 
-Используй навык task-decomposition. Входные данные: $ARGUMENTS
+Use the task-decomposition skill. Input data: $ARGUMENTS
 
-$ARGUMENTS — путь к prd.md или slug итерации (например: "01-article-processing").
+$ARGUMENTS — path to prd.md or iteration slug (e.g.: "01-article-processing").
 
-Если $ARGUMENTS пустые — предложи выбрать из существующих PRD в docs/discovery/.
-Для каждой задачи укажи: роль, приоритет, сложность, зависимости, acceptance criteria.
-Сгруппируй задачи по волнам выполнения (waves) с учётом зависимостей.
+If $ARGUMENTS is empty — offer to choose from existing PRDs in docs/discovery/.
+For each task specify: role, priority, complexity, dependencies, acceptance criteria.
+Group tasks by execution waves with dependencies taken into account.

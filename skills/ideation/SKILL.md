@@ -4,40 +4,40 @@ description: >
   Structure a raw idea into a concise Idea Brief (<100 lines).
   Use when the user describes a new product, feature, or system
   and needs it formalized before writing a PRD.
-  Triggers: "ideate", "idea brief", "формализовать идею", "упаковать идею"
+  Triggers: "ideate", "idea brief", "formalize idea", "package idea"
 allowed-tools: Read, Grep, Glob, Write
 ---
 
 # Ideation Skill
 
-> **Опциональная фаза.** Ideation полезна для сложных или размытых идей, но не обязательна.
-> Если идея уже ясна — можно сразу переходить к `/prd`.
+> **Optional phase.** Ideation is useful for complex or vague ideas, but not required.
+> If the idea is already clear — you can proceed directly to `/prd`.
 
-Упакуй сырую идею пользователя в структурированный Idea Brief — максимум 100 строк.
-Idea Brief — это НЕ PRD. Это «салфетка с чертежом», которая формализует **What** и **Why**, не трогая How.
+Package the user's raw idea into a structured Idea Brief — maximum 100 lines.
+Idea Brief is NOT a PRD. It's a "napkin sketch" that formalizes **What** and **Why**, without touching How.
 
-## Инструкции
+## Instructions
 
-1. Прочитай `@docs/system-context.md` если существует — пойми что уже есть в системе
-2. Прочитай `@docs/discovery/INDEX.md` если существует — определи следующий номер итерации
-3. Задай пользователю до 5 уточняющих вопросов в стиле Mom Test:
-   - Какую проблему решаем? Кто с ней сталкивается?
-   - Что сейчас делает пользователь вместо этого?
-   - Какие ограничения (технические, временные, бюджетные)?
-   - Что точно НЕ входит в scope?
-   - Как поймём что получилось? (метрики успеха)
-4. Сгенерируй Idea Brief по [шаблону](templates/idea-brief.md)
-5. Определи следующий номер итерации (NN) из `docs/discovery/INDEX.md` или начни с 01
-6. Создай папку `docs/discovery/NN-<slug>/` и сохрани туда `idea-brief.md`
-7. Обнови `docs/discovery/INDEX.md` — добавь новую строку со статусом `Discovery`
+1. Read `@docs/system-context.md` if it exists — understand what already exists in the system
+2. Read `@docs/discovery/INDEX.md` if it exists — determine the next iteration number
+3. Ask the user up to 5 clarifying questions in Mom Test style:
+   - What problem are we solving? Who faces it?
+   - What does the user currently do instead?
+   - What are the constraints (technical, time, budget)?
+   - What is definitely NOT in scope?
+   - How will we know it worked? (success metrics)
+4. Generate Idea Brief using the [template](templates/idea-brief.md)
+5. Determine the next iteration number (NN) from `docs/discovery/INDEX.md` or start with 01
+6. Create folder `docs/discovery/NN-<slug>/` and save `idea-brief.md` there
+7. Update `docs/discovery/INDEX.md` — add a new row with status `Discovery`
 
-## Важно
+## Important
 
-- Idea Brief должен быть **менее 100 строк**
-- Не уходи в детали реализации — это задача PRD
-- Если system-context существует, учитывай что уже реализовано
-- Slug для папки — короткий, через дефис, на английском (например: `article-processing`, `user-auth`)
+- Idea Brief must be **less than 100 lines**
+- Don't go into implementation details — that's the PRD's job
+- If system-context exists, consider what's already implemented
+- Folder slug should be short, hyphenated, in English (e.g.: `article-processing`, `user-auth`)
 
 ## Supporting files
 
-- [templates/idea-brief.md](templates/idea-brief.md) — шаблон Idea Brief
+- [templates/idea-brief.md](templates/idea-brief.md) — Idea Brief template

@@ -1,6 +1,6 @@
 # SDLC Toolkit
 
-Claude Code плагин для полного MVP-цикла разработки: Ideation → PRD → Task Decomposition → Development → Context Updates.
+Claude Code plugin for the full MVP development cycle: Ideation → PRD → Task Decomposition → Development → Context Updates.
 
 ## Installation
 
@@ -16,32 +16,32 @@ claude --plugin-dir ./sdlc-toolkit
 ```
 
 ### Manual copy
-Скопируйте содержимое в директорию и подключите через `--plugin-dir`.
+Copy the contents to a directory and connect via `--plugin-dir`.
 
 ## Quick Start
 
-1. Установите плагин одним из способов выше
-2. Адаптируйте `CLAUDE.md` вашего проекта (добавьте стек, конвенции)
-3. Запустите `/sdlc-toolkit:prd "описание фичи"` (или `/sdlc-toolkit:ideate` если идея сырая)
+1. Install the plugin using one of the methods above
+2. Adapt your project's `CLAUDE.md` (add stack, conventions)
+3. Run `/sdlc-toolkit:prd "feature description"` (or `/sdlc-toolkit:ideate` if the idea is raw)
 
 ## Workflow
 
 ```
-(опционально)
-/sdlc-toolkit:ideate "описание идеи"
+(optional)
+/sdlc-toolkit:ideate "idea description"
     ↓ docs/discovery/01-slug/idea-brief.md
 
-/sdlc-toolkit:prd "описание фичи"          ← напрямую
-/sdlc-toolkit:prd 01-article-processing     ← из Idea Brief
+/sdlc-toolkit:prd "feature description"          ← directly
+/sdlc-toolkit:prd 01-article-processing          ← from Idea Brief
     ↓ docs/discovery/01-slug/prd.md
 
 /sdlc-toolkit:decompose 01-article-processing
     ↓ docs/discovery/01-slug/tasks/
 
-... разработка ...
+... development ...
 
 /sdlc-toolkit:update-context
-    ↓ docs/system-context.md (обновлён)
+    ↓ docs/system-context.md (updated)
 ```
 
 ## Plugin Structure
@@ -82,40 +82,40 @@ sdlc-toolkit/
 
 | Command | Description |
 |---------|-------------|
-| `/sdlc-toolkit:ideate` | (опционально) Упаковка сырой идеи в Idea Brief (<100 строк) |
-| `/sdlc-toolkit:prd` | Генерация PRD из Idea Brief, описания или System Context |
-| `/sdlc-toolkit:decompose` | Нарезка PRD на задачи с зависимостями |
-| `/sdlc-toolkit:update-context` | Обновление system-context.md после реализации |
+| `/sdlc-toolkit:ideate` | (optional) Package a raw idea into an Idea Brief (<100 lines) |
+| `/sdlc-toolkit:prd` | Generate PRD from Idea Brief, description, or System Context |
+| `/sdlc-toolkit:decompose` | Break down PRD into tasks with dependencies |
+| `/sdlc-toolkit:update-context` | Update system-context.md after implementation |
 
 ## Discovery Structure
 
-Каждая итерация живёт в отдельной папке `docs/discovery/NN-slug/` вашего проекта:
+Each iteration lives in a separate folder `docs/discovery/NN-slug/` in your project:
 
 ```
 docs/discovery/01-article-processing/
-├── idea-brief.md    # (опционально) что и зачем
-├── prd.md           # Детальные требования
-├── decisions.md     # ADR для этой итерации
-└── tasks/           # Атомарные задачи
+├── idea-brief.md    # (optional) what and why
+├── prd.md           # Detailed requirements
+├── decisions.md     # ADR for this iteration
+└── tasks/           # Atomic tasks
     ├── INDEX.md
     ├── TASK-001.md
     └── TASK-002.md
 ```
 
-Статусы итераций: `Discovery` → `In Review` → `Approved` → `Done`
+Iteration statuses: `Discovery` → `In Review` → `Approved` → `Done`
 
 ## Philosophy
 
-Вместо хаотичного «напиши мне код» — структурированный процесс:
-1. **Идея** (опционально) формализуется в Idea Brief
-2. **Требования** детализируются в PRD с API-контрактами и моделями данных
-3. **Задачи** нарезаются атомарно с зависимостями и acceptance criteria
-4. **Контекст** обновляется после реализации — следующая итерация видит что уже сделано
+Instead of chaotic "write me code" — a structured process:
+1. **Idea** (optional) is formalized into an Idea Brief
+2. **Requirements** are detailed in a PRD with API contracts and data models
+3. **Tasks** are broken down atomically with dependencies and acceptance criteria
+4. **Context** is updated after implementation — the next iteration sees what's already done
 
 ## Adapting for Your Project
 
-В `CLAUDE.md` вашего проекта добавьте:
-- Стек проекта (язык, фреймворки, инфраструктура)
-- Команды сборки и тестирования
-- Конвенции именования и code style
-- Ссылку на плагин: `sdlc-toolkit` установлен, команды через `/sdlc-toolkit:*`
+In your project's `CLAUDE.md` add:
+- Project stack (language, frameworks, infrastructure)
+- Build and test commands
+- Naming conventions and code style
+- Reference to the plugin: `sdlc-toolkit` installed, commands via `/sdlc-toolkit:*`

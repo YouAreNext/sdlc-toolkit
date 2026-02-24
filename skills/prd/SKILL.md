@@ -4,55 +4,55 @@ description: >
   Generate a Product Requirements Document from an Idea Brief or raw description.
   Always reads system-context.md to account for existing system state.
   Includes functional requirements, API contracts, data models, and test strategy.
-  Triggers: "prd", "requirements", "написать PRD", "продуктовые требования"
+  Triggers: "prd", "requirements", "write PRD", "product requirements"
 allowed-tools: Read, Grep, Glob, Write
 ---
 
 # PRD Skill
 
-Сгенерируй полноценный PRD на основе Idea Brief, описания от пользователя или System Context.
-PRD должен содержать: функциональные требования, API-контракты, data models, стратегию тестирования.
+Generate a complete PRD based on an Idea Brief, user description, or System Context.
+PRD must include: functional requirements, API contracts, data models, testing strategy.
 
-## Точки входа
+## Entry Points
 
-PRD можно создать из разных источников:
-- **Из Idea Brief** — если фаза ideation уже пройдена, читай `docs/discovery/NN-<slug>/idea-brief.md`
-- **Напрямую** — если ideation пропущена, PRD создаётся из описания пользователя или аргументов команды
+PRD can be created from different sources:
+- **From Idea Brief** — if the ideation phase is complete, read `docs/discovery/NN-<slug>/idea-brief.md`
+- **Directly** — if ideation is skipped, PRD is created from user description or command arguments
 
-## Ключевая механика: учёт существующей системы
+## Key Mechanism: Accounting for Existing System
 
-PRD-скилл **всегда** начинает с чтения system-context.md:
-- **Первый PRD** (system-context пустой): генерирует с нуля, в секции "Current System State" пишет "Greenfield"
-- **Последующие PRD**: читает существующие API, модели, сервисы и строит **delta** — что добавляем/меняем
+The PRD skill **always** starts by reading system-context.md:
+- **First PRD** (system-context empty): generates from scratch, writes "Greenfield" in "Current System State" section
+- **Subsequent PRDs**: reads existing APIs, models, services and builds a **delta** — what we're adding/changing
 
-## Инструкции
+## Instructions
 
-1. Прочитай `@docs/system-context.md` — это текущее состояние системы
-2. Прочитай `@docs/discovery/INDEX.md` — определи следующий номер итерации
-3. Определи источник требований:
-   - Если передан путь к idea-brief или slug итерации — прочитай Idea Brief из `docs/discovery/NN-<slug>/idea-brief.md`
-   - Если передано текстовое описание — используй его как входные данные напрямую
-   - Если аргументы пустые — спроси пользователя что делаем
-4. Если папка `docs/discovery/NN-<slug>/` ещё не существует — создай её (определи следующий NN из INDEX.md или начни с 01)
-5. Если `docs/discovery/INDEX.md` не существует — создай его по [шаблону](templates/discovery-index.md)
-6. Если system-context не пустой — определи что уже реализовано и строй PRD как delta
-7. Сгенерируй PRD по [шаблону](templates/prd.md)
-8. Для каждого API endpoint — укажи метод, path, request/response schema в JSON
-9. Для каждой модели данных — укажи поля, типы, constraints, индексы
-10. Секция Testing Strategy — обязательна, включает подход и ключевые сценарии
-11. Сохрани в `docs/discovery/NN-<slug>/prd.md`
-12. Обнови `docs/discovery/INDEX.md` — добавь или обнови строку, статус `In Review`
+1. Read `@docs/system-context.md` — this is the current system state
+2. Read `@docs/discovery/INDEX.md` — determine the next iteration number
+3. Determine the requirements source:
+   - If path to idea-brief or iteration slug is provided — read Idea Brief from `docs/discovery/NN-<slug>/idea-brief.md`
+   - If text description is provided — use it as direct input
+   - If arguments are empty — ask the user what we're building
+4. If folder `docs/discovery/NN-<slug>/` doesn't exist yet — create it (determine next NN from INDEX.md or start with 01)
+5. If `docs/discovery/INDEX.md` doesn't exist — create it using the [template](templates/discovery-index.md)
+6. If system-context is not empty — determine what's already implemented and build PRD as delta
+7. Generate PRD using the [template](templates/prd.md)
+8. For each API endpoint — specify method, path, request/response schema in JSON
+9. For each data model — specify fields, types, constraints, indexes
+10. Testing Strategy section is required — include approach and key scenarios
+11. Save to `docs/discovery/NN-<slug>/prd.md`
+12. Update `docs/discovery/INDEX.md` — add or update row, status `In Review`
 
-## Важно
+## Important
 
-- **Каждый** API endpoint должен иметь конкретный request/response schema — не абстракции
-- **Каждое** функциональное требование должно иметь проверяемые acceptance criteria
-- Секция "Current System State" заполняется автоматически из system-context.md
-- Если greenfield — укажи явно
-- Data Models должны включать типы полей, constraints и связи между моделями
-- Slug для папки — короткий, через дефис, на английском (например: `article-processing`, `user-auth`)
+- **Every** API endpoint must have a concrete request/response schema — no abstractions
+- **Every** functional requirement must have verifiable acceptance criteria
+- "Current System State" section is auto-filled from system-context.md
+- If greenfield — state it explicitly
+- Data Models must include field types, constraints, and relationships between models
+- Folder slug should be short, hyphenated, in English (e.g.: `article-processing`, `user-auth`)
 
 ## Supporting files
 
-- [templates/prd.md](templates/prd.md) — шаблон PRD
-- [templates/discovery-index.md](templates/discovery-index.md) — шаблон Discovery Index
+- [templates/prd.md](templates/prd.md) — PRD template
+- [templates/discovery-index.md](templates/discovery-index.md) — Discovery Index template

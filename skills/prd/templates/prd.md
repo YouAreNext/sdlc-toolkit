@@ -2,33 +2,33 @@
 
 **Status:** Draft | Review | Approved
 **Date:** YYYY-MM-DD
-**Idea Brief:** [ссылка на idea brief]
+**Idea Brief:** [link to idea brief]
 
 ## Current System State
-[Автоматически заполняется из system-context.md]
-[Что уже существует и как новая фича к этому относится]
-[Если greenfield — указать явно]
+[Auto-filled from system-context.md]
+[What already exists and how the new feature relates to it]
+[If greenfield — state explicitly]
 
 ## Overview
-[Что делаем и зачем — 3-5 предложений]
+[What we're doing and why — 3-5 sentences]
 
 ## Functional Requirements
 
-### FR-1: [Название]
-- **Description:** [что должна делать система]
+### FR-1: [Title]
+- **Description:** [what the system should do]
 - **Priority:** P0 | P1 | P2
 - **Acceptance Criteria:**
-  - [ ] [Критерий 1]
-  - [ ] [Критерий 2]
+  - [ ] [Criterion 1]
+  - [ ] [Criterion 2]
 
-### FR-2: [Название]
+### FR-2: [Title]
 ...
 
 ## API Contracts
 
 ### [POST /api/v1/resource]
-- **Description:** [назначение]
-- **Auth:** [требования]
+- **Description:** [purpose]
+- **Auth:** [requirements]
 - **Request Body:**
 ```json
 {
@@ -41,7 +41,7 @@
   "field": "type — description"
 }
 ```
-- **Error Codes:** 400, 401, 404, 500 — [когда каждый]
+- **Error Codes:** 400, 401, 404, 500 — [when each occurs]
 
 ## Data Models
 
@@ -51,26 +51,26 @@
 | id | UUID | yes | Primary key |
 | ... | ... | ... | ... |
 
-**Indexes:** [список индексов]
-**Relations:** [связи с другими моделями]
+**Indexes:** [list of indexes]
+**Relations:** [relationships with other models]
 
 ## System Changes
-[Что меняется в существующей системе]
-- New services: [список]
-- Modified services: [список с описанием изменений]
-- New infrastructure: [что нужно создать]
-- Modified infrastructure: [что нужно изменить]
+[What changes in the existing system]
+- New services: [list]
+- Modified services: [list with change descriptions]
+- New infrastructure: [what needs to be created]
+- Modified infrastructure: [what needs to be changed]
 
 ## Non-Functional Requirements
-- **Performance:** [целевые метрики]
-- **Scalability:** [ожидаемая нагрузка]
-- **Security:** [требования]
-- **Observability:** [логирование, мониторинг, алерты]
+- **Performance:** [target metrics]
+- **Scalability:** [expected load]
+- **Security:** [requirements]
+- **Observability:** [logging, monitoring, alerts]
 
 ## Testing Strategy
-- **Unit tests:** [что покрываем, целевой coverage]
-- **Integration tests:** [ключевые сценарии]
-- **E2E scenarios:** [критический путь]
+- **Unit tests:** [what we cover, target coverage]
+- **Integration tests:** [key scenarios]
+- **E2E scenarios:** [critical path]
 
 ## Dependencies & Risks
 | Risk | Impact | Mitigation |
@@ -78,4 +78,4 @@
 | ... | ... | ... |
 
 ## Out of Scope
-[Что явно не делаем в рамках этого PRD]
+[What we're explicitly not doing in this PRD]

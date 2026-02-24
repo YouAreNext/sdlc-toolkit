@@ -1,22 +1,22 @@
-# TASK-[NNN]: [Название]
+# TASK-[NNN]: [Title]
 
 **Role:** Backend | Frontend | Infrastructure | Data
 **Priority:** P0 | P1 | P2
 **Complexity:** S | M | L | XL
-**Depends on:** TASK-XXX, TASK-YYY (или "none")
-**PRD Reference:** FR-N [ссылка на требование]
+**Depends on:** TASK-XXX, TASK-YYY (or "none")
+**PRD Reference:** FR-N [link to requirement]
 
 ## Description
-[Что нужно сделать — конкретно, без абстракций]
+[What needs to be done — concrete, no abstractions]
 
 ## Acceptance Criteria
-- [ ] [Конкретный проверяемый критерий]
-- [ ] [Ещё один]
+- [ ] [Concrete verifiable criterion]
+- [ ] [Another one]
 - [ ] Tests written and passing
 
 ## Technical Notes
-[Подсказки по реализации, рекомендуемые подходы, файлы для изменения]
+[Implementation hints, recommended approaches, files to modify]
 
 ## Files to Create/Modify
-- `path/to/new/file.py` — [назначение]
-- `path/to/existing/file.py` — [что меняем]
+- `path/to/new/file.py` — [purpose]
+- `path/to/existing/file.py` — [what we're changing]

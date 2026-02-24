@@ -1,30 +1,30 @@
 # SDLC Toolkit
 
-Модульный набор Claude Code skills для полного цикла разработки.
-Установлен как плагин: skills доступны через namespace `sdlc-toolkit:`.
+Modular set of Claude Code skills for the full development cycle.
+Installed as a plugin: skills are available via the `sdlc-toolkit:` namespace.
 
 ## Workflow
 [Ideation] → PRD → Task Decomposition → Development → Update Context → (repeat)
 
-Ideation — опциональная фаза. Можно начать итерацию сразу с /sdlc-toolkit:prd.
+Ideation is an optional phase. You can start an iteration directly with /sdlc-toolkit:prd.
 
 ## Conventions
-- Все output-артефакты — markdown в docs/ или рядом с кодом
-- system-context.md — single source of truth о текущем состоянии проекта
-- Каждая итерация живёт в отдельной папке docs/discovery/NN-<slug>/
-- Discovery-артефакты (idea brief, PRD, tasks, decisions) группируются по итерации
-- Финальные артефакты после апрува обновляют системные docs (docs/api/, docs/models/) через /sdlc-toolkit:update-context
-- docs/discovery/INDEX.md — реестр всех итераций со статусами
-- PRD всегда читает @docs/system-context.md перед генерацией
-- Задачи содержат acceptance criteria и зависимости
-- После реализации фичи — обязательный /sdlc-toolkit:update-context
+- All output artifacts are markdown in docs/ or alongside the code
+- system-context.md is the single source of truth about the current project state
+- Each iteration lives in a separate folder docs/discovery/NN-<slug>/
+- Discovery artifacts (idea brief, PRD, tasks, decisions) are grouped by iteration
+- Final artifacts after approval update system docs (docs/api/, docs/models/) via /sdlc-toolkit:update-context
+- docs/discovery/INDEX.md is the registry of all iterations with statuses
+- PRD always reads @docs/system-context.md before generation
+- Tasks contain acceptance criteria and dependencies
+- After feature implementation — mandatory /sdlc-toolkit:update-context
 
 ## Skills
-- /sdlc-toolkit:ideate — (опционально) упаковка идеи в idea brief (<100 строк)
-- /sdlc-toolkit:prd — генерация PRD из idea brief, описания или system context
-- /sdlc-toolkit:decompose — нарезка PRD на задачи по ролям
-- /sdlc-toolkit:update-context — обновление system-context.md после реализации
+- /sdlc-toolkit:ideate — (optional) package an idea into an idea brief (<100 lines)
+- /sdlc-toolkit:prd — generate PRD from idea brief, description, or system context
+- /sdlc-toolkit:decompose — break down PRD into tasks by roles
+- /sdlc-toolkit:update-context — update system-context.md after implementation
 
 ## Important
-- @docs/system-context.md — текущая архитектура и состояние
-- @docs/discovery/INDEX.md — реестр всех discovery-итераций
+- @docs/system-context.md — current architecture and state
+- @docs/discovery/INDEX.md — registry of all discovery iterations

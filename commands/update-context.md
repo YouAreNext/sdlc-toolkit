@@ -1,9 +1,9 @@
-Обнови system-context.md после реализации фичи.
+Update system-context.md after feature implementation.
 
-Используй навык update-context. Входные данные: $ARGUMENTS
+Use the update-context skill. Input data: $ARGUMENTS
 
-$ARGUMENTS — slug итерации (например: "01-article-processing") или пусто для автоопределения.
+$ARGUMENTS — iteration slug (e.g.: "01-article-processing") or empty for auto-detection.
 
-Просканируй кодовую базу и последний реализованный PRD.
-Обнови @docs/system-context.md: компоненты, API, модели, инфраструктуру.
-Обнови статус итерации в @docs/discovery/INDEX.md на Done.
+Scan the codebase and the last implemented PRD.
+Update @docs/system-context.md: components, APIs, models, infrastructure.
+Update the iteration status in @docs/discovery/INDEX.md to Done.

@@ -1,14 +1,14 @@
 # System Context
 
 **Last updated:** YYYY-MM-DD
-**Project:** [Название]
+**Project:** [Name]
 
 ## Architecture Overview
-[High-level описание системы — обновляется по мере роста]
+[High-level system description — updated as the system grows]
 
 ## Components
 
-<!-- Добавляются автоматически через /update-context -->
+<!-- Added automatically via /update-context -->
 
 ## API Endpoints
 | Method | Path | Service | Description | Added in |
@@ -16,7 +16,7 @@
 
 ## Data Models
 
-<!-- Добавляются автоматически через /update-context -->
+<!-- Added automatically via /update-context -->
 
 ## Infrastructure
 - **Compute:** [Lambda, ECS, ...]

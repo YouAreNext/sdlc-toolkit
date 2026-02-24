@@ -1,11 +1,11 @@
-Сгенерируй PRD (Product Requirements Document).
+Generate a PRD (Product Requirements Document).
 
-Используй навык prd. Входные данные: $ARGUMENTS
+Use the prd skill. Input data: $ARGUMENTS
 
-$ARGUMENTS может быть:
-- Путь к idea-brief.md или slug итерации (например: "01-article-processing") — PRD строится на основе Idea Brief
-- Текстовое описание фичи — PRD создаётся напрямую, без предварительного Idea Brief
-- Пусто — спроси пользователя что делаем
+$ARGUMENTS can be:
+- Path to idea-brief.md or iteration slug (e.g.: "01-article-processing") — PRD is built based on the Idea Brief
+- Text description of the feature — PRD is created directly, without a preliminary Idea Brief
+- Empty — ask the user what we're building
 
-Если папка discovery-итерации ещё не существует — создай её.
-Всегда читай @docs/system-context.md перед генерацией — учитывай что уже реализовано.
+If the discovery iteration folder doesn't exist yet — create it.
+Always read @docs/system-context.md before generation — consider what's already implemented.

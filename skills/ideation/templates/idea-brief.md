@@ -1,27 +1,27 @@
-# Idea Brief: [Название]
+# Idea Brief: [Title]
 
 ## Problem Statement
-[2-3 предложения: какую боль решаем, для кого]
+[2-3 sentences: what pain are we solving, for whom]
 
 ## Proposed Solution
-[3-5 предложений: что делаем на high level]
+[3-5 sentences: what we're doing at a high level]
 
 ## Key User Flows
-1. [Основной flow]
-2. [Второй flow если есть]
+1. [Main flow]
+2. [Second flow if applicable]
 
 ## Scope Boundaries
-- IN: [что входит]
-- OUT: [что явно не входит в MVP]
+- IN: [what's included]
+- OUT: [what's explicitly not in MVP]
 
 ## Success Criteria
-- [Метрика 1]
-- [Метрика 2]
+- [Metric 1]
+- [Metric 2]
 
 ## Known Constraints
-- [Технические]
-- [Бизнесовые]
-- [Временные]
+- [Technical]
+- [Business]
+- [Timeline]
 
 ## Open Questions
-- [Что ещё нужно выяснить]
+- [What still needs to be figured out]
