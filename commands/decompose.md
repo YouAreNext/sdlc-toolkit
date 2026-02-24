@@ -1,3 +1,7 @@
+---
+description: Break down the PRD into atomic tasks for developers
+---
+
 Break down the PRD into atomic tasks for developers.
 
 Use the task-decomposition skill. Input data: $ARGUMENTS

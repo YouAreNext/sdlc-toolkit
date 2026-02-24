@@ -1,3 +1,7 @@
+---
+description: Update system-context.md after feature implementation
+---
+
 Update system-context.md after feature implementation.
 
 Use the update-context skill. Input data: $ARGUMENTS

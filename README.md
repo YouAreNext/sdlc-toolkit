@@ -80,6 +80,10 @@ sdlc-toolkit/
 │   │   ├── SKILL.md
 │   │   └── templates/
 │   │       └── task.md
+│   ├── adr/
+│   │   ├── SKILL.md
+│   │   └── templates/
+│   │       └── adr.md
 │   └── update-context/
 │       ├── SKILL.md
 │       └── templates/
@@ -87,6 +91,7 @@ sdlc-toolkit/
 ├── commands/
 │   ├── ideate.md
 │   ├── prd.md
+│   ├── adr.md
 │   ├── decompose.md
 │   └── update-context.md
 ├── hooks/
@@ -100,6 +105,7 @@ sdlc-toolkit/
 |---------|-------------|
 | `/sdlc-toolkit:ideate` | (optional) Package a raw idea into an Idea Brief (<100 lines) |
 | `/sdlc-toolkit:prd` | Generate PRD from Idea Brief, description, or System Context |
+| `/sdlc-toolkit:adr` | Create Architecture Decision Record (ADR) for technical decisions |
 | `/sdlc-toolkit:decompose` | Break down PRD into tasks with dependencies |
 | `/sdlc-toolkit:update-context` | Update system-context.md after implementation |
 
@@ -111,7 +117,8 @@ Each iteration lives in a separate folder `docs/discovery/NN-slug/` in your proj
 docs/discovery/01-article-processing/
 ├── idea-brief.md    # (optional) what and why
 ├── prd.md           # Detailed requirements
-├── decisions.md     # ADR for this iteration
+├── decisions/       # Architecture Decision Records
+│   └── ADR-001.md
 └── tasks/           # Atomic tasks
     ├── INDEX.md
     ├── TASK-001.md

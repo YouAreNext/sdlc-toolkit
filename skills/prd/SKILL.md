@@ -28,20 +28,41 @@ The PRD skill **always** starts by reading system-context.md:
 ## Instructions
 
 1. Read `@docs/system-context.md` — this is the current system state
-2. Read `@docs/discovery/INDEX.md` — determine the next iteration number
+2. Read `@docs/discovery/INDEX.md` — determine the next iteration number (NN)
 3. Determine the requirements source:
-   - If path to idea-brief or iteration slug is provided — read Idea Brief from `docs/discovery/NN-<slug>/idea-brief.md`
-   - If text description is provided — use it as direct input
+   - If iteration slug is provided (e.g., "01-article-reading") — read Idea Brief from `docs/discovery/01-article-reading/idea-brief.md`
+   - If text description is provided — use it as direct input, generate slug from it
    - If arguments are empty — ask the user what we're building
-4. If folder `docs/discovery/NN-<slug>/` doesn't exist yet — create it (determine next NN from INDEX.md or start with 01)
-5. If `docs/discovery/INDEX.md` doesn't exist — create it using the [template](templates/discovery-index.md)
-6. If system-context is not empty — determine what's already implemented and build PRD as delta
-7. Generate PRD using the [template](templates/prd.md)
-8. For each API endpoint — specify method, path, request/response schema in JSON
-9. For each data model — specify fields, types, constraints, indexes
-10. Testing Strategy section is required — include approach and key scenarios
-11. Save to `docs/discovery/NN-<slug>/prd.md`
-12. Update `docs/discovery/INDEX.md` — add or update row, status `In Review`
+4. **Generate a slug** if creating new iteration — short, hyphenated, lowercase, English only
+   - Example: "User Authentication System" → `user-auth`
+5. **Create the iteration folder first** if it doesn't exist: `docs/discovery/NN-<slug>/`
+   - Example: `docs/discovery/01-article-reading/`
+6. If `docs/discovery/INDEX.md` doesn't exist — create it using the [template](templates/discovery-index.md)
+7. If system-context is not empty — determine what's already implemented and build PRD as delta
+8. Generate PRD using the [template](templates/prd.md)
+9. For each API endpoint — specify method, path, request/response schema in JSON
+10. For each data model — specify fields, types, constraints, indexes
+11. Testing Strategy section is required — include approach and key scenarios
+12. Save to `docs/discovery/NN-<slug>/prd.md` (INSIDE the iteration folder!)
+13. Update `docs/discovery/INDEX.md` — add or update row, status `In Review`
+
+## Critical: Folder Structure
+
+**CORRECT structure:**
+```
+docs/discovery/
+├── INDEX.md
+└── 01-article-reading/      ← folder for iteration
+    ├── idea-brief.md        ← (optional) from ideation phase
+    └── prd.md               ← PRD inside folder
+```
+
+**WRONG structure (don't do this):**
+```
+docs/discovery/
+├── INDEX.md
+└── 01-prd.md                ← WRONG! No folder created
+```
 
 ## Important
 
@@ -50,7 +71,8 @@ The PRD skill **always** starts by reading system-context.md:
 - "Current System State" section is auto-filled from system-context.md
 - If greenfield — state it explicitly
 - Data Models must include field types, constraints, and relationships between models
-- Folder slug should be short, hyphenated, in English (e.g.: `article-processing`, `user-auth`)
+- Slug must be short, hyphenated, lowercase, English (e.g.: `article-processing`, `user-auth`)
+- **Always ensure the iteration folder exists**, then save prd.md inside it
 
 ## Supporting files
 
