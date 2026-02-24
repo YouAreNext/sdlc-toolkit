@@ -4,31 +4,34 @@ Claude Code plugin for the full MVP development cycle: Ideation → PRD → Task
 
 ## Installation
 
-### VSCode Extension
-Use the `/plugin` command in chat to open the plugin popup, then enter:
+### Step 1: Add Marketplace
+
+In Claude Code interactive session (VSCode or CLI), run:
 ```
-youarenext/sdlc-toolkit
-```
-or the full URL:
-```
-https://github.com/youarenext/sdlc-toolkit
+/plugin marketplace add youarenext/sdlc-toolkit
 ```
 
-### Terminal (CLI)
+### Step 2: Install Plugin
 
-**For current project only:**
+**Option A: Via UI**
+```
+/plugin
+```
+Then go to "Discover" tab, find `sdlc-toolkit`, press Enter and choose scope.
+
+**Option B: Via command**
+```
+/plugin install sdlc-toolkit@youarenext-sdlc-toolkit --scope project
+```
+
+### Scope Options
+- `--scope user` — globally for all your projects
+- `--scope project` — only for current project (shared with team)
+- `--scope local` — only for current project (gitignored)
+
+### Local Development
 ```bash
-claude plugin install youarenext/sdlc-toolkit --scope project
-```
-
-**Globally (all projects):**
-```bash
-claude plugin install youarenext/sdlc-toolkit --scope user
-```
-
-### Local development
-```bash
-claude --plugin-dir ./sdlc-toolkit
+claude --plugin-dir /path/to/sdlc-toolkit
 ```
 
 ## Quick Start
