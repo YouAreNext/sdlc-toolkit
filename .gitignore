@@ -1,1 +1,10 @@
-./plans
+# Development files - not part of the plugin
+plans/
+
+# OS files
+.DS_Store
+
+# Editor files
+.idea/
+.vscode/
+*.swp
