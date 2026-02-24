@@ -5,7 +5,7 @@
   "author": {
     "name": "Kirill Ivanov"
   },
-  "repository": "https://github.com/kirillivanov/sdlc-toolkit",
+  "repository": "https://github.com/youarenext/sdlc-toolkit",
   "license": "MIT",
   "keywords": ["sdlc", "prd", "ideation", "task-decomposition", "discovery", "workflow", "requirements"]
 }

@@ -1,0 +1,15 @@
+{
+  "name": "sdlc-toolkit-marketplace",
+  "description": "SDLC Toolkit plugin marketplace",
+  "owner": {
+    "name": "Kirill Ivanov"
+  },
+  "plugins": [
+    {
+      "name": "sdlc-toolkit",
+      "source": ".",
+      "description": "End-to-end SDLC workflow: Ideation → PRD → Task Decomposition → Development → Context Updates",
+      "version": "1.0.0"
+    }
+  ]
+}
