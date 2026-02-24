@@ -7,7 +7,7 @@
   "plugins": [
     {
       "name": "sdlc-toolkit",
-      "source": ".",
+      "source": "./",
       "description": "End-to-end SDLC workflow: Ideation → PRD → Task Decomposition → Development → Context Updates",
       "version": "1.0.0"
     }
