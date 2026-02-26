@@ -1,6 +1,6 @@
 # SDLC Toolkit
 
-Claude Code plugin for the full MVP development cycle: Ideation → PRD → Task Decomposition → Development → Context Updates.
+Claude Code plugin for the full MVP development cycle: Ideation → Foundation → PRD → Task Decomposition → Development → Context Updates.
 
 ## Installation
 
@@ -37,15 +37,20 @@ claude --plugin-dir /path/to/sdlc-toolkit
 ## Quick Start
 
 1. Install the plugin using one of the methods above
-2. Adapt your project's `CLAUDE.md` (add stack, conventions)
+2. For greenfield: run `/sdlc-toolkit:foundation` to set up tech stack and project structure
 3. Run `/sdlc-toolkit:prd "feature description"` (or `/sdlc-toolkit:ideate` if the idea is raw)
 
 ## Workflow
 
 ```
-(optional)
+(optional — if idea is raw)
 /sdlc-toolkit:ideate "idea description"
     ↓ docs/discovery/01-slug/idea-brief.md
+
+(optional — for greenfield projects)
+/sdlc-toolkit:foundation
+    ↓ .claude/rules/tech-stack.md
+    ↓ docs/system-context.md (Tech Stack section)
 
 /sdlc-toolkit:prd "feature description"          ← directly
 /sdlc-toolkit:prd 01-article-processing          ← from Idea Brief
@@ -71,6 +76,12 @@ sdlc-toolkit/
 │   │   ├── SKILL.md
 │   │   └── templates/
 │   │       └── idea-brief.md
+│   ├── foundation/
+│   │   ├── SKILL.md
+│   │   └── templates/
+│   │       ├── tech-stack-rules.md
+│   │       ├── tech-stack-presets.md
+│   │       └── project-structures.md
 │   ├── prd/
 │   │   ├── SKILL.md
 │   │   └── templates/
@@ -96,6 +107,7 @@ sdlc-toolkit/
 │           └── system-context.md
 ├── commands/
 │   ├── ideate.md
+│   ├── foundation.md
 │   ├── prd.md
 │   ├── adr.md
 │   ├── generate-claude-md.md
@@ -111,6 +123,7 @@ sdlc-toolkit/
 | Command | Description |
 |---------|-------------|
 | `/sdlc-toolkit:ideate` | (optional) Package a raw idea into an Idea Brief (<100 lines) |
+| `/sdlc-toolkit:foundation` | (greenfield) Establish tech stack, project structure, conventions |
 | `/sdlc-toolkit:prd` | Generate PRD from Idea Brief, description, or System Context |
 | `/sdlc-toolkit:adr` | Create Architecture Decision Record (ADR) for technical decisions |
 | `/sdlc-toolkit:generate-claude-md` | Generate a CLAUDE.md for the current project (under 80 lines, best practices) |

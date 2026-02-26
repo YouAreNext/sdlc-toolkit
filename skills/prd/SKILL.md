@@ -25,6 +25,17 @@ The PRD skill **always** starts by reading system-context.md:
 - **First PRD** (system-context empty): generates from scratch, writes "Greenfield" in "Current System State" section
 - **Subsequent PRDs**: reads existing APIs, models, services and builds a **delta** — what we're adding/changing
 
+## Pre-check for Greenfield
+
+Before generating PRD, check:
+1. Is `docs/system-context.md` empty or missing? (greenfield)
+2. Does `.claude/rules/tech-stack.md` exist?
+
+**If greenfield AND no tech-stack.md:**
+→ Suggest to the user: "This looks like a new project without established tech stack. Consider running `/sdlc-toolkit:foundation` first to define project structure and technical conventions. This will help ensure consistent architecture decisions."
+
+Let the user decide whether to run foundation first or proceed with PRD.
+
 ## Instructions
 
 1. Read `@docs/system-context.md` — this is the current system state

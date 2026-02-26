@@ -4,9 +4,12 @@ Modular set of Claude Code skills for the full development cycle.
 Installed as a plugin: skills are available via the `sdlc-toolkit:` namespace.
 
 ## Workflow
-[Ideation] → PRD → Task Decomposition → Development → Update Context → (repeat)
+[Ideation] → [Foundation] → PRD → Task Decomposition → Development → Update Context → (repeat)
 
-Ideation is an optional phase. You can start an iteration directly with /sdlc-toolkit:prd.
+Ideation and Foundation are optional phases.
+- Ideation: package a raw idea into a structured brief
+- Foundation: establish tech stack and project structure (for greenfield projects)
+- If both are defined: start directly with /sdlc-toolkit:prd
 
 ## Conventions
 - All output artifacts are markdown in docs/ or alongside the code
@@ -20,6 +23,7 @@ Ideation is an optional phase. You can start an iteration directly with /sdlc-to
 - After feature implementation — mandatory /sdlc-toolkit:update-context
 
 ## Skills
+- /sdlc-toolkit:foundation — (greenfield) establish tech stack, project structure, conventions
 - /sdlc-toolkit:ideate — (optional) package an idea into an idea brief (<100 lines)
 - /sdlc-toolkit:prd — generate PRD from idea brief, description, or system context
 - /sdlc-toolkit:adr — create Architecture Decision Record for technical decisions
