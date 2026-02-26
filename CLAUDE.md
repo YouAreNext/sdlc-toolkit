@@ -23,6 +23,7 @@ Ideation is an optional phase. You can start an iteration directly with /sdlc-to
 - /sdlc-toolkit:ideate — (optional) package an idea into an idea brief (<100 lines)
 - /sdlc-toolkit:prd — generate PRD from idea brief, description, or system context
 - /sdlc-toolkit:adr — create Architecture Decision Record for technical decisions
+- /sdlc-toolkit:generate-claude-md — generate CLAUDE.md for a project (under 80 lines, best practices)
 - /sdlc-toolkit:decompose — break down PRD into tasks by roles
 - /sdlc-toolkit:update-context — update system-context.md after implementation
 

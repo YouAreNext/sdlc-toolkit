@@ -52,7 +52,7 @@ claude --plugin-dir /path/to/sdlc-toolkit
     ↓ docs/discovery/01-slug/prd.md
 
 /sdlc-toolkit:decompose 01-article-processing
-    ↓ docs/discovery/01-slug/tasks/
+    ↓ docs/discovery/01-slug/tasks.md
 
 ... development ...
 
@@ -84,6 +84,12 @@ sdlc-toolkit/
 │   │   ├── SKILL.md
 │   │   └── templates/
 │   │       └── adr.md
+│   ├── generate-claude-md/
+│   │   ├── SKILL.md
+│   │   └── templates/
+│   │       ├── claude-md.md
+│   │       ├── claude-local-md.md
+│   │       └── scoped-rule.md
 │   └── update-context/
 │       ├── SKILL.md
 │       └── templates/
@@ -92,6 +98,7 @@ sdlc-toolkit/
 │   ├── ideate.md
 │   ├── prd.md
 │   ├── adr.md
+│   ├── generate-claude-md.md
 │   ├── decompose.md
 │   └── update-context.md
 ├── hooks/
@@ -106,6 +113,7 @@ sdlc-toolkit/
 | `/sdlc-toolkit:ideate` | (optional) Package a raw idea into an Idea Brief (<100 lines) |
 | `/sdlc-toolkit:prd` | Generate PRD from Idea Brief, description, or System Context |
 | `/sdlc-toolkit:adr` | Create Architecture Decision Record (ADR) for technical decisions |
+| `/sdlc-toolkit:generate-claude-md` | Generate a CLAUDE.md for the current project (under 80 lines, best practices) |
 | `/sdlc-toolkit:decompose` | Break down PRD into tasks with dependencies |
 | `/sdlc-toolkit:update-context` | Update system-context.md after implementation |
 
@@ -119,10 +127,7 @@ docs/discovery/01-article-processing/
 ├── prd.md           # Detailed requirements
 ├── decisions/       # Architecture Decision Records
 │   └── ADR-001.md
-└── tasks/           # Atomic tasks
-    ├── INDEX.md
-    ├── TASK-001.md
-    └── TASK-002.md
+└── tasks.md         # All tasks with waves and dependencies
 ```
 
 Iteration statuses: `Discovery` → `In Review` → `Approved` → `Done`
