@@ -9,7 +9,7 @@
       "name": "sdlc-toolkit",
       "source": "./",
       "description": "End-to-end SDLC workflow: Ideation → PRD → Task Decomposition → Development → Context Updates",
-      "version": "1.0.0"
+      "version": "1.1.0"
     }
   ]
 }
